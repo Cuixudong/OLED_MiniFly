@@ -361,6 +361,7 @@ void OLED_Clear(uint8_t para)
 void OLED_DrawPoint(uint16_t x,uint16_t y,uint8_t p)
 {
     uint8_t pos,bx,temp=0;
+    y=63-y;
     if(x>127||y>63)return;//³¬³ö·¶Î§ÁË.
     pos=7-y/8;
     bx=y%8;
